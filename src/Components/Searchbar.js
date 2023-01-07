@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
 import styles from "./Searchbaar.module.css"
+import Card from '../assest/Card'
 function Searchbar(props) {
   const[Enteredtext,settext]=useState('')
    
@@ -21,7 +22,9 @@ function Searchbar(props) {
         }
     
   return (
+    <Card>
     <div className={styles.search}>
+      
      <form onSubmit={preventHandler}>
       <input onChange={changeHandler} value={Enteredtext} type="text" placeholder='Type someting'/>
       <br/>
@@ -31,7 +34,7 @@ function Searchbar(props) {
 
      </form>
 
-    </div>
+    </div></Card>
   )
 }
 
