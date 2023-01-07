@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
 
+import './App.css';
+import Searchbar from './Components/Searchbar';
+import ImageList from './Components/ImageList';
+import ImageShow from './Components/ImageShow';
 function App() {
+ const savehandler=(signal)=>{
+  console.log(signal);
+ }
+ 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Searchbar onSave={savehandler}/>
+      <ImageList/>
+    <ImageShow/>
     </div>
   );
 }
 
 export default App;
+// first create three component files
