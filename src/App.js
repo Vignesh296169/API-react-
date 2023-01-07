@@ -18,7 +18,9 @@ function App() {
     <div className="App">
       <Searchbar onSave={savehandler}/>
       <ImageList images={images}/>
-    
+      <footer>
+        <section><em>-Vignesh</em></section>
+      </footer>
     </div>
   );
 }
