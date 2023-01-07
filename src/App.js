@@ -2,17 +2,23 @@
 import './App.css';
 import Searchbar from './Components/Searchbar';
 import ImageList from './Components/ImageList';
-import ImageShow from './Components/ImageShow';
+import SearchImage from './Api';
+import React,{useState} from 'react';
 function App() {
- const savehandler=(signal)=>{
-  console.log(signal);
+  const [images,setimages]=useState([])
+  // here enter details take from input bar after that we pass that in api as parameter
+ const savehandler=async (item)=>{
+  console.log(item)
+   const retur= await SearchImage(item);
+  //  now we sent that data to image list component
+       setimages(retur);
  }
  
   return (
     <div className="App">
       <Searchbar onSave={savehandler}/>
-      <ImageList/>
-    <ImageShow/>
+      <ImageList images={images}/>
+    
     </div>
   );
 }

@@ -1,8 +1,13 @@
 import React from 'react'
-
-function ImageList() {
+import ImageShow from './ImageShow'
+function ImageList(props) {
   return (
-    <div>ImageList</div>
+         <>
+          {props.images.map(item=><ImageShow key={item.id} images={item}/>)}
+          
+         
+         
+         </>
   )
 }
 

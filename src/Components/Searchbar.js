@@ -1,13 +1,29 @@
-import React from 'react'
+import React,{useState} from 'react'
 
 function Searchbar(props) {
-
-
-    props.onSave()
+  const[Enteredtext,settext]=useState('')
+   
+  const changeHandler=(event)=>{
+    settext(event.target.value);
+  }
+  
+  
+  const preventHandler=(e)=>{
+          e.preventDefault();
+          const res={
+            title:Enteredtext,
+            
+          }
+     
+    props.onSave(res.title);
+    settext('')
+    
+        }
+    
   return (
     <div>
-     <form>
-      <input type="text" placeholder='Type someting'/>
+     <form onSubmit={preventHandler}>
+      <input onChange={changeHandler} value={Enteredtext} type="text" placeholder='Type someting'/>
       <br/>
       
       <button type="submit" >Search</button>

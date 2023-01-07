@@ -1,8 +1,9 @@
 import React from 'react'
 
-function ImageShow() {
+function ImageShow({images}) {
+    
   return (
-    <div>ImageShow</div>
+    <div ><img src={images.urls.small} alt="Images from unsplash api"/></div>
   )
 }
 
