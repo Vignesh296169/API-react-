@@ -24,6 +24,9 @@
 .search input{
     border-radius: 6px;
 }
+.search button{
+    margin-top: 1rem;
+}
 
 
    

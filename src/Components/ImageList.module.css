@@ -1,5 +1,5 @@
 .imglist{
-    columns: 6 200px;
+    columns: 6 250px;
     column-gap: 10px;
 
 }
@@ -11,4 +11,7 @@ img{
     .imglist{
         columns: 2;
     }
+}
+img{
+    cursor: pointer;
 }

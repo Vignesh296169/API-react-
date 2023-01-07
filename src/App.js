@@ -4,14 +4,16 @@ import Searchbar from './Components/Searchbar';
 import ImageList from './Components/ImageList';
 import SearchImage from './Api';
 import React,{useState} from 'react';
+
+
 function App() {
   const [images,setimages]=useState([])
   // here enter details take from input bar after that we pass that in api as parameter
  const savehandler=async (item)=>{
-  console.log(item)
+  
    const retur= await SearchImage(item);
   //  now we sent that data to image list component
-       setimages(retur);
+       setimages(retur)
  }
  
   return (
@@ -20,6 +22,7 @@ function App() {
       <ImageList images={images}/>
       <footer>
         <section><em>-Vignesh</em></section>
+     
       </footer>
     </div>
   );
