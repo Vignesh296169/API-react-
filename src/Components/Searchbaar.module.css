@@ -23,7 +23,7 @@
 }
 .search button{
     margin-top: 1rem;
-    background-image:linear-gradient(to right, white 1%,rgb(193, 5, 230));
+    background-color: rgb(19, 86, 230);
     border-radius: 7px;
 }
 
